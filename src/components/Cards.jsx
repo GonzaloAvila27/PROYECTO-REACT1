@@ -2,14 +2,16 @@ import './CSS/Cards.css'
 
 const Cards = () => {
   return (
-    <div className="card" style="width: 18rem;">
-        <img src="..." className="card-img-top" alt="..."/>
+    <div className='container'>
+    <div className="card Cards">
+        <img className="card-img-top"/>
             <div className="card-body">
+                <div className='image'></div>
                 <h5 className="card-title">Chinchulines</h5>
-                <a href="#" className="btn btn-primary">Add to Cart</a>
+                <a className="btn btn-primary">Add to Cart</a>
             </div>
     </div>
- 
+    </div>
   )
 }
 

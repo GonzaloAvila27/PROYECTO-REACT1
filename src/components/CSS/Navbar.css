@@ -1,20 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-:root{
-    --ghost-white: #f8f9fd;
-    --CARNE: #D51C29;
-    --granite-gray: #626a6a;
-    --baltic-sea: #33383c;
-    --trans: all 0.5s ease-in-out;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Barlow', sans-serif;
-}.navbar{
+.navbar{
     position: fixed;
     top: 0;
     left: 50%;
@@ -30,7 +15,7 @@
     align-items: center;
     background: var(--ghost-white) url(/multimedia/svg/fondodiscreto.svg)  center/cover no-repeat;
     padding: 1.5rem 0;
-    z-index: 999;
+    z-index: -999;
 }
 .navbar-toggler{
     justify-self: center;
@@ -70,7 +55,7 @@
     position: relative;
 }
 #cart-count-info{
-    position: absolute;
+    position: absolute; 
     top: -12px;
     right: -8px;
     background: var(--CARNE);
@@ -89,6 +74,8 @@
     font-weight: 600;
 }
 .NavEl {
+    text-align: center;
+    background-color: whitesmoke;
     padding: 0.05rem 0.45rem;
     font-size: 1.2rem;
     border: none;

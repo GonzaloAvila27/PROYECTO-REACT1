@@ -1,0 +1,24 @@
+
+.Cards {
+    position: relative;
+    background-color: rgb(253, 167, 167); 
+    width: 18rem;
+    height: auto;
+    margin-top: 10vh;
+
+}
+.image {
+    width: 18rem;
+    background: var(--ghost-white);
+    background-image: url(/src/multimedia/svg/carnivorecarbonB.svg) center/cover no-repeat;
+    padding: 3rem 0;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} /* esto de la jerarquia de css no termino de entender,. preferiria hacer todo por Sass*/
