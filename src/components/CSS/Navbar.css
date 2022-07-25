@@ -15,7 +15,7 @@
     align-items: center;
     background: var(--ghost-white) url(/multimedia/svg/fondodiscreto.svg)  center/cover no-repeat;
     padding: 1.5rem 0;
-    z-index: -999;
+   /* z-index: 999; */
 }
 .navbar-toggler{
     justify-self: center;
@@ -41,7 +41,7 @@
     padding-right: 8px;
 }
 #nav-brand{
-    background-image: url(./multimedia/svg/logoCompleto.svg);
+    background-image: url(/src/multimedia/svg/logoCompleto.svg);
     background-repeat: no-repeat;
     padding: 1.5rem;
     max-width: 35rem;
@@ -86,4 +86,17 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+.ItemList  {
+    padding: 20px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+    background-color: var(--CARNE);
+}
+h1 { 
+    color: aliceblue;
+    text-align: center; 
 }

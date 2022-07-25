@@ -11,14 +11,11 @@
     width: 18rem;
     background: var(--ghost-white);
     background-image: url(/src/multimedia/svg/carnivorecarbonB.svg) center/cover no-repeat;
-    padding: 3rem 0;
-    height: 350px;
+    height: 220px;
     overflow: hidden;
     position: relative;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
     
 }
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} /* esto de la jerarquia de css no termino de entender,. preferiria hacer todo por Sass*/
