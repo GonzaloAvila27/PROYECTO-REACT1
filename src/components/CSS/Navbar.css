@@ -88,13 +88,14 @@
     -o-border-radius: 5px;
 }
 .ItemList  {
-    padding: 20px;
-    display: flex;
-    align-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 5px;
-    background-color: var(--CARNE);
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding-top: 30px;
+        padding: 40px;
+        justify-content: center;
+        background-color: var(--CARNE);
 }
 h1 { 
     color: aliceblue;
