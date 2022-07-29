@@ -5,4 +5,3 @@ export default function Item({list}) {
     <>{JSON.stringify(list)}</>
   )
 }
-// se puede poner styles
