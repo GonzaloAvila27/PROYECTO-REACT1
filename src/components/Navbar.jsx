@@ -1,17 +1,17 @@
 import CartWidged from './CartWidged'
 import './CSS/Navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className='container'>
       <nav className = "navbar">
-          <a href = "index.html"><div id="nav-brand"></div></a>
-          <a className='NavEl'> About Us </a>
-          <a className='NavEl'> Contact </a>
+          <Link to ={"/"}><div id="nav-brand"></div></Link>
+          <Link to ={"/"} className='NavEl'> About Us </Link>
+          <Link to ={"/"} className='NavEl'> Contact </Link>
             <CartWidged  />
       </nav> 
     </div>      
-  
   )
 }
 
