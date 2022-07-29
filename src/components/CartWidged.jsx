@@ -8,7 +8,7 @@ const CartWidged = () => {
     <div className = 'cart'>
           <button type = "button" id = "cart-btn">
              <i className = "bi bi-cart"></i>
-             <p id = "cart-count-info">{}</p>
+             <p id = "cart-count-info">CART</p>
           </button>  
           </div>
   )
