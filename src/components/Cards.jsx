@@ -7,8 +7,8 @@ const Cards = () => {
     <div className="card Cards">
         <img className="card-img-top"/>
             <div className="card-body">
-                <div className="image"> bonita pic</div>
-                <h1 className="card-title">Producto</h1>
+            <h3>{list.name}</h3>
+            <p>{list.type}</p>
                 <ItemCount />
             </div>
     </div>

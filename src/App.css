@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
-:root{
-  --ghost-white: #f8f9fd;
-  --CARNE: #D51C29;
-  --granite-gray: #626a6a;
-  --baltic-sea: #33383c;
-  --trans: all 0.5s ease-in-out;
+* {
+    margin:0 ;
+    padding: 0;
+    
 }
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
-}
-
-body {
-  background: var(--baltic-sea);
-  font-family: 'Barlow', sans-serif;
-  color: var(--ghost-white);
-}
+button {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    width: 15%;
+    cursor: pointer;
+  }
+  button.add {
+    background-color: #40c0f0;
+    width: 1.5rem;
+  }
+  button.remove {
+    background-color: #f04040;
+    width: 1.5rem;
+  }

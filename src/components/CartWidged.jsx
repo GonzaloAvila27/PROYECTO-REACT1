@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './CSS/Navbar.css'
 import ItemCount from './ItemCount'
  
 

@@ -2,14 +2,23 @@ import React, { useState } from 'react'
 
 
 
+
 const ItemCount = () => {
         const [itemCount, setItemCount] = useState(1);
-        console.log(itemCount);
- 
+
+        const itemAdd = () => {
+          setItemCount(itemCount + 1)        
+      }
+        const itemRemove = () => {
+          setItemCount(itemCount - 1)        
+      }
 return (
-    <>     
-        <button className="btn btn-primary" onClick={() => setItemCount(itemCount+1)}>Add to Cart</button>
-        <p> N products added {itemCount}</p>
+    <>   
+        <div className="/">
+            <button disabled={itemCount === 1 } onClick={itemRemove} className="button remove">-</button>
+            {itemCount}
+            <button onClick={itemAdd} className="button add ">+</button>
+        </div>        
     </>
   )
 }

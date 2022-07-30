@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 
+
+
 export default function ItemListContainer() {
   
   const [list, setList] = useState([])
@@ -20,7 +22,6 @@ export default function ItemListContainer() {
     }, 2000);
   })
   promiseProducts.then((products)=>{
-/*    console.log(products); */
     setList(products)
   })
 }, [] )
