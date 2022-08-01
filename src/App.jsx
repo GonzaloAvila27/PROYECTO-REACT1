@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter >
     <Navbar />
         <Routes>
-           <Route path='/' element={< Item />}/>
+           <Route path='/' element={<ItemListContainer />}/>
            <Route path='ategory/:idCategoria' element={[]}/>
            <Route path='producto/:idProducto' element={[]}/>
            <Route path='*' element={<p>404</p>}/>
@@ -22,6 +22,7 @@ function App() {
     <ItemCount />
     <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
     </BrowserRouter>
+
     </>
 )
 }
