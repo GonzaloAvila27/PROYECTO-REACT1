@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemDetailContainer from './ItemDetailContainer'
 
 export default function Item({list}) {
   return (
@@ -6,7 +7,7 @@ export default function Item({list}) {
     {/*{JSON.stringify(list)}*/}
     <h2 className='card-tit'>{list.name}</h2>  
     <h4 className='card-price'>{list.price}</h4>
-    <button>See more details</button>
+    < ItemDetailContainer />
 </div> 
   )
 }

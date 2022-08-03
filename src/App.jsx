@@ -15,7 +15,7 @@ function App() {
     <Navbar />
         <Routes>
            <Route path='/' element={<ItemListContainer />}/>
-           <Route path='ategory/:idCategoria' element={[]}/>
+           <Route path='ategory/:idType' element={[]}/>
            <Route path='producto/:idProducto' element={[]}/>
            <Route path='*' element={<p>404</p>}/>
         </Routes>

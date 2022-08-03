@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 
 
@@ -6,6 +7,14 @@ import ItemList from './ItemList'
 export default function ItemListContainer() {
   
   const [list, setList] = useState([])
+  const { idType } = useParams()
+  
+  function filterList(type){
+    let array = {...list}
+    array = array.filter(list => list.type.includes(type))
+    setList(array)
+  }
+  
   useEffect(() =>{
     let productsHardC = [
     { id: 1, name: "product1", price: 200, type: "top"},
@@ -25,6 +34,10 @@ export default function ItemListContainer() {
     setList(products)
   })
 }, [] )
+
+useEffect (() => {
+  filterList(idType)
+}, [idType])
 
   return (
     <ItemList list={list} />

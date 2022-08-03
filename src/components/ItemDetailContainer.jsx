@@ -1,8 +1,8 @@
 import React from 'react'
-
+import ItemDetail  from "./ItemDetail"
 
 
 export default function ItemDetailContainer() {
-  return (<div>ItemDetailContainer</div>
+  return (<button><ItemDetail /></button>
   )
 }
