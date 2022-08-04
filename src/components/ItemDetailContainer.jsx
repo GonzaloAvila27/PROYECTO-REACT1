@@ -5,14 +5,14 @@ import ItemCount from './ItemCount'
 export default function ItemDetailContainer() {
 
   
-  const onAdd = (quantity) => {
-    console.log(`Compraste ${quantity} unidades`);
+  const onAdd = (Q) => {
+    console.log(`Compraste ${Q} unidades`);
   }
 
-  
+
   return (
   <>
-  <button><ItemDetail /></button>
+  <button> <ItemDetail /></button>
   <ItemCount initial={1} stock={5} onAdd={onAdd}/>
   </>
   )
