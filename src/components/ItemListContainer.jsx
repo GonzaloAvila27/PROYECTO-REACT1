@@ -7,13 +7,13 @@ import ItemList from './ItemList'
 export default function ItemListContainer() {
   
   const [list, setList] = useState([])
-  const { idType } = useParams()
+ /* const { idType } = useParams()
   
   function filterList(type){
     let array = {...list}
     array = array.filter(list => list.type.includes(type))
     setList(array)
-  }
+  }  */
   
   useEffect(() =>{
     let productsHardC = [
@@ -35,10 +35,11 @@ export default function ItemListContainer() {
   })
 }, [] )
 
-useEffect (() => {
-  filterList(idType)
+/*useEffect (() => {
+  if(idType) filterList(idType) 
+  else setList()
 }, [idType])
-
+*/
   return (
     <ItemList list={list} />
   )

@@ -19,7 +19,6 @@ function App() {
            <Route path='producto/:idProducto' element={[]}/>
            <Route path='*' element={<p>404</p>}/>
         </Routes>
-    <ItemCount />
     <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
     </BrowserRouter>
 

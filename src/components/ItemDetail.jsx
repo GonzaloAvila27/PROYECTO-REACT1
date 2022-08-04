@@ -1,7 +1,14 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import ItemCount from './ItemCount' 
 
 export default function ItemDetail(list) {
+
+    const onAdd = (quantity) => {
+      console.log(`Compraste ${quantity} unidades`);
+    }
+  
+
+
   return (
     <>
     <div>ItemDetail</div>
@@ -11,7 +18,7 @@ export default function ItemDetail(list) {
     <h4 className='card-price'>{list.price}</h4>
     <h4 >{list.id}</h4>
     <h5>{list.type}</h5>
-    <ItemCount />
+    
 
     </div>
     </>
