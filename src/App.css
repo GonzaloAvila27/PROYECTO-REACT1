@@ -1,8 +1,7 @@
-/* * {
+* {
     margin:0 ;
     padding: 0;
-    
-} */
+ } 
 
 
 button {
@@ -21,4 +20,8 @@ button {
   button.remove {
     background-color: #f04040;
     width: 1.5rem;
+  }
+
+  .pipi  {
+    border: red solid 2px, 
   }
