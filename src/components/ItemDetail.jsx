@@ -1,8 +1,8 @@
 import React from 'react'
 import ItemCount from './ItemCount' 
-i
 
-export default function ItemDetail(prod) {
+
+export default function ItemDetail({prod}) {
 
 
 
