@@ -9,9 +9,7 @@ export default function ItemDetailContainer() {
   ]
   const [prod, setProd] = useState({})
 
-  const onAdd = (Q) => {
-    console.log(`Compraste ${Q} unidades`);
-  }
+ 
   useEffect(() => {
     const getProd = new Promise((res) => {
       setTimeout(() => {
@@ -20,13 +18,12 @@ export default function ItemDetailContainer() {
     })
   
     getProd.then(res => setProd(res))
+    console.log(prod);
   }, [])
   
-
   return (
-  <>
+    <>
   <div> <ItemDetail prod={prod} /></div>
-  <ItemCount initial={1} stock={5} onAdd={onAdd}/>
   </>
   )
 }
