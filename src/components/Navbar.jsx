@@ -2,11 +2,12 @@ import CartWidged from './CartWidged'
 import { NavLink } from 'react-router-dom'
 import "./Styles/Navbar.css" 
 
+
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/" ><div className='navbrand'>brand q no sale</div></NavLink>
+    <NavLink className="navbar-brand" to="/" ><img className="navbrand"/></NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -20,9 +21,8 @@ const Navbar = () => {
           Categories
           </NavLink>
           <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="/Category" >Category 1</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/Category" >Category 2</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/Category" >Category 3</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/Category/top" >Category 1</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/Category/low" >Category 2</NavLink></li>
           </ul>
         </li>
         <li className="nav-item">

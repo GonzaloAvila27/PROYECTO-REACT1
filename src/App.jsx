@@ -14,7 +14,7 @@ function App() {
     <Navbar />
         <Routes>
            <Route path='/' element={<ItemListContainer />}/>
-           <Route path='Category/:idType' element={<ItemListContainer />}/>
+           <Route path='Category/:idCategory' element={<ItemListContainer />}/>
            <Route path='producto/:idProducto' element={ <ItemDetailContainer />}/>
            <Route path='*' element={<p>404</p>}/>
         </Routes>
