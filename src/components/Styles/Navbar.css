@@ -1,5 +1,6 @@
 
 .navbrand {
     background-image: url(/src/multimedia/svg/logoCompleto.svg) cover no-repeat;
+    color: whitesmoke;
+    font-weight: 800;
 }
-    

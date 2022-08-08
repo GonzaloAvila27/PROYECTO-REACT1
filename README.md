@@ -1,4 +1,1 @@
- 
-
-
- De que se trata, que librerias use,algun chamuyyo etc
+ El proyecto aun no esta definido, lo más probable es que sea un E-comerce de algun producto friki, pero ya veremos 🤣

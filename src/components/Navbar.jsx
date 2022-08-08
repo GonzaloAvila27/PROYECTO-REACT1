@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/" ><div className="navbrand">Brandqxalgunarazonnoseve</div></NavLink>
+    <NavLink className="navbar-brand " to="/" ><div className="navbrand">Brandqxalgunarazonnoseve</div></NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -21,8 +21,8 @@ const Navbar = () => {
           Categories
           </NavLink>
           <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="/Category/top" >Category 1</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/Category/low" >Category 2</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/Category/top" >Top</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/Category/low" >Low</NavLink></li>
           </ul>
         </li>
         <li className="nav-item">
