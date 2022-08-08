@@ -15,7 +15,7 @@ function App() {
         <Routes>
            <Route path='/' element={<ItemListContainer />}/>
            <Route path='Category/:idCategory' element={<ItemListContainer />}/>
-           <Route path='producto/:idProducto' element={ <ItemDetailContainer />}/>
+           <Route path='producto/:idDetail' element={ <ItemDetailContainer />}/>
            <Route path='*' element={<p>404</p>}/>
         </Routes>
     <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
