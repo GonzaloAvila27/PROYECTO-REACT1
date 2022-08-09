@@ -19,7 +19,7 @@ export default function ItemDetail({prod}) {
             <span>STOCK: {prod.stock}</span> // <span>${prod.price}</span> <br />
                 {
                   goCart ? <Link to='/cart'><button>Go to Cart</button></Link>
-                  : <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+                  : <ItemCount initial={1} stock={prod.stock} onAdd={onAdd}/>
                 }
       </div>
     </div>
