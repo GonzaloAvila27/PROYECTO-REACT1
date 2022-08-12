@@ -6,13 +6,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css"
 import ItemDetailContainer from './components/DetailList/ItemDetailContainer';
 import Cart from './components/Cart';
-
+import { CartP, useCartContext } from './context/CartContext'
 
 function App() {
   return (
     <>  
     <BrowserRouter >
-    <Navbar />
+    <CartP>
+      <Navbar />
         <Routes>
            <Route path='/' element={<ItemListContainer />}/>
            <Route path='Category/:idCategory' element={<ItemListContainer />}/>
@@ -20,6 +21,7 @@ function App() {
            <Route path='*' element={<p>404</p>}/>
            <Route path='cart' element={< Cart />} />
         </Routes>
+    </CartP>
     <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
    
     </BrowserRouter>
