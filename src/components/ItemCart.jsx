@@ -1,7 +1,7 @@
 import React from 'react'
 import { useCartContext } from '../context/CartContext'
 
-export default function ItemCart() {
+export default function ItemCart({product}) {
    const{ removeFCart} = useCartContext()
   return (
     <div>
