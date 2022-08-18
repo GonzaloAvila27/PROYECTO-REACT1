@@ -1,4 +1,4 @@
-import React, { Children, useContext, useState } from 'react'
+import React, { children, useContext, useState } from 'react'
 const CartContext = React.createContext([])
 export const useCartContext = () => useContext(CartContext)
 
@@ -17,7 +17,7 @@ export const CartP = ({children}) =>{
     const addProduct = (item, Q) => {
         if (IsInCart(item.id)) {
             setCart(cart.map(product => {
-                return product.id === item.id ? {...product, Q: product.Q + Q} : product
+                return product.id === item.id ? {...product, Q: product.Q + Q } : product
             }))
         } else {
             setCart([...cart, {...item, Q}])
@@ -26,7 +26,7 @@ export const CartP = ({children}) =>{
     const totalPrice = () => {
         return cart.reduce((prev, act) => prev + act.Q * act.price, 0)
     }
-    const totalProducts = () => cart.reduce((acumulador, actualProduct) => acumulador + actualProduct.Q, 0) 
+    const totalProducts = () => cart.reduce((acum, actualProduct) => acum + actualProduct.Q , 0) 
     const IsInCart = (id) => cart.find(product => product.id === id) ? true : false //verify    
     const removeFCart = (id) => setCart(cart.filter(product => product.id !== id)) //remove   
     const clearCart = () => setCart([]) //clear
