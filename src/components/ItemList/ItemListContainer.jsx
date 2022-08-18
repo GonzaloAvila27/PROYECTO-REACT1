@@ -11,7 +11,7 @@ export default function ItemListContainer() {
   
   useEffect(() =>{
     let productsHardC = [
-      { id: 1, name: "product1", price: 200, category: "top", image: "https://i.pinimg.com/originals/61/eb/b4/61ebb49188cacfc1847c5cded7620854.jpg", stock: 10},
+      { id: 1, name: "product1", price: 200, category: "top", image: "https://image.png.61ebb49188cacfc1847c5cded7620854.com/originals/61/eb/b4/61ebb49188cacfc1847c5cded7620854.jpg", stock: 10},
       { id: 2, name: "product2", price: 100, category: "low", image: "https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/e9/b2/86/e9b2865b-2831-4ebb-d874-556fa6c0f9ef/source/256x256bb.jpg", stock: 100},
       { id: 3, name: "product3", price: 300, category: "top", image: "https://ps.w.org/primary-cat/assets/icon-256x256.jpg?rev=2450877", stock: 10},
       { id: 4, name: "product4", price: 100, category: "low", image: "https://pbs.twimg.com/profile_images/737359467742912512/t_pzvyZZ_400x400.jpg", stock: 100},

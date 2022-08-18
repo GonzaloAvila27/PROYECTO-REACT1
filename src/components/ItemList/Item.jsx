@@ -6,7 +6,7 @@ export default function Item({info}) {
   return (
     <>
         <div className="card col" style={{width: "18rem"}}>
-            <img src="{info.image}" className="card-img-top" alt="Product Image"/>
+            <img src={info.image} className={info.name} alt="Product Image"/>
           <div className="card-body">
                 <h5 className="card-title">Name: {info.name}</h5>
             <Link to={`/producto/${info.id}`} className="btn btn-primary">See More!</Link>
