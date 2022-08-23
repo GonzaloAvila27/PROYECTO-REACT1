@@ -7,9 +7,10 @@ import {  useCartContext } from "../../context/CartContext";
 export default function ItemDetail({prod}) {
   const [goCart, setGoCart] = useState(false)
   const {addTCart} = useCartContext();
-  const onAdd = (Q) => {
+  const onAdd = (quantity) => {
+    console.log(`compraste ${quantity}`);
     setGoCart(true)
-    addTCart(prod, Q)
+    addTCart(prod, quantity)
   }
 
   return (

@@ -8,9 +8,9 @@ export default function ItemCart({product}) {
         <img src={product.img} alt={product.name} />
     <div>
         <p>Product:{product.name}</p>
-        <p>Quantity:{product.Q}</p>
+        <p>Quantity:{product.quantity}</p>
         <p>Price:{product.price}</p>
-        <p>SubTotal:{product.Q * product.price}</p>
+        <p>SubTotal:{product.quantity * product.price}</p>
         <button onClick={() => removeFCart(product.id)}>Delete</button>
     </div>
 
