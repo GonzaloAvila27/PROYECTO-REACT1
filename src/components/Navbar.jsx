@@ -21,8 +21,9 @@ const Navbar = () => {
           Categories
           </NavLink>
           <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="/Category/top" >Top</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/Category/low" >Low</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/category/Dark's" >Dark's</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/category/Pale's" >Pale's</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/category/Red's" >Red's</NavLink></li>
           </ul>
         </li>
         <li className="nav-item">

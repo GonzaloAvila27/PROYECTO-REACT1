@@ -3,11 +3,11 @@ import Item from './Item'
 
 
 
-export default function ItemList({list}) {
+export default function ItemList({products}) {
   return (
     <> 
-        {list.map((list)=>(
-        < Item key={list.id} info={list} />
+        {products.map((product)=>(
+        < Item key={product.id} info={product} />
       ))}
 
     </>

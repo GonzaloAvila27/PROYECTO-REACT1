@@ -16,10 +16,10 @@ function App() {
       <Navbar />
         <Routes>
            <Route path='/' element={<ItemListContainer />}/>
-           <Route path='Category/:idCategory' element={<ItemListContainer />}/>
+           <Route path='category/:idCategory' element={<ItemListContainer />}/>
            <Route path='producto/:idDetail' element={ <ItemDetailContainer />}/>
-           <Route path='*' element={<p>404</p>}/>
            <Route path='cart' element={< Cart />} />
+           <Route path='*' element={<p>404</p>}/>
         </Routes>
     </CartP>
     <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
