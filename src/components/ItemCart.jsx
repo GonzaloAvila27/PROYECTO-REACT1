@@ -5,12 +5,12 @@ export default function ItemCart({product}) {
    const{ removeFCart} = useCartContext()
   return (
     <div>
-        <img src={product.img} alt={product.name} />
+        <img src={product.image} alt={product.name} />
     <div>
-        <p>Product:{product.name}</p>
+        <h2>{product.name}</h2>
         <p>Quantity:{product.quantity}</p>
-        <p>Price:{product.price}</p>
-        <p>SubTotal:{product.quantity * product.price}</p>
+        <span>Unit price:{product.price}</span> //  
+        <span>SubTotal:{product.quantity * product.price}</span>
         <button onClick={() => removeFCart(product.id)}>Delete</button>
     </div>
 

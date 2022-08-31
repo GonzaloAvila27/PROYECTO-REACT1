@@ -1,27 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
+import { useCartContext } from '../context/CartContext';
 
 
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
-        const [quantity, setQuantity] = useState(initial);
+const [count, setCount] = useState(initial);
+const {cart} = useCartContext();
 
-        const itemAdd = () => {
-          setQuantity(quantity + 1)        
-      }
-        const itemRemove = () => {
-          setQuantity(quantity - 1)        
-      }
+  useEffect(() => { setCount(initial)}, [initial])
+  
+  const decrease = () => {
+    setCount(count-1)
+  }
+  
+  const increase = () => {
+      setCount(count+1)
+  }
+  
+  const handleAdd = () => {
+    onAdd(count)
+  }
+
+
 return (
     <>   
         <div className="/">
-            <button disabled={quantity <= 1 } onClick={itemRemove} className="button remove">-</button>
-            <span>{quantity}</span>
-            <button disabled = {quantity === stock}  onClick={itemAdd} className="button add ">+</button>
-            <br/><button  disabled = {quantity === 0 } onClick={() => onAdd(setQuantity)}><i className="bi bi-cart-plus"></i>  </button>
+            <button disabled={count <= 1 } onClick={decrease} className="button remove"> - </button>
+            <span>{count}</span>
+            <button disabled = {count === stock}  onClick={increase} className="button add "> + </button>
+            <br/>
+            <button  disabled = {count === 0 }  onClick={handleAdd}><i className="bi bi-cart-plus"></i>  </button>
         </div>        
     </>
   )
 }
 
 export default ItemCount
+
+

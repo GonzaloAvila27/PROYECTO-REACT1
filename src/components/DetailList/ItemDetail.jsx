@@ -4,31 +4,51 @@ import { Link } from 'react-router-dom'
 import {  useCartContext } from "../../context/CartContext";
 
 
-export default function ItemDetail({prod}) {
+export default function ItemDetail({product, loading}) {
   const [goCart, setGoCart] = useState(false)
-  const {addTCart} = useCartContext();
-  const onAdd = (quantity) => {
-    console.log(`compraste ${quantity}`);
+  const {addProduct } = useCartContext();
+  
+  console.log(product.id);
+  const onAdd = (count) => {
+    if (count <= product.stock) { alert ( `${count} ${product.name} added to cart`) 
     setGoCart(true)
-    addTCart(prod, quantity)
+    addProduct(product, count) 
+    console.log(product, count);  
+    } else {
+      alert(`te cache + ${product.id} + ${count}`)
+  
+    }
   }
 
   return (
     <>
-      <div className="card col" style={{width: "50rem"}}>
-        <img src={prod.image} className="card-img-top" alt={prod.name}/>
-      <div className="card-body">
-            <h5 className="card-title">{prod.name}</h5>
-            <p className="card-text">Description: {prod.desc}</p>
-            <p className="card-text">Pairs with: {prod.pairs}</p>
-    
-            <span>STOCK: {prod.stock}</span> // <span>${prod.price}</span> //<span>ABV: {prod.ABV}</span><br />
-                {
-                  goCart ? <Link to='/cart'><button>Go to Cart</button></Link>
-                  : <ItemCount initial={1} stock={prod.stock} onAdd={onAdd}/>
-                }
+{loading && 
+      <div className="d-flex justify-content-center">
+      <div className="spinner-border" role="status"/>
       </div>
-    </div>
-   </>
+            }
+  
+{ loading ||
+           <div className="card col" style={{width: "50rem"}}>
+                  <img src={product.image} className="card-img-top" alt={product.name}/>
+                       <div className="card-body">
+                            <h5 className="card-title">{product.name}</h5>
+                            <p className="card-text">Description: {product.desc}</p>
+                            <p className="card-text">Pairs with: {product.pairs}</p>
+                                          
+                                            {
+                                              goCart ? <Link to='/cart'><button>Go to Cart</button></Link>
+                                             : <ItemCount initial={product.initial} stock={product.stock} onAdd={onAdd}/>
+                                            }
+                        </div>   
+           </div>}
+  </>
     )
   }
+
+
+
+
+
+
+

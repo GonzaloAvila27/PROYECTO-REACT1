@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import ItemCart from './ItemCart'
 
 export default function Cart({product}) {
-  const {cart, totalPrice } = useCartContext()
+  const {cart, totalPrice} = useCartContext()
 
   if (cart.length === 0) {
     return (
@@ -18,11 +18,12 @@ export default function Cart({product}) {
   return ( 
   <>
       {
-      cart.map(product => <ItemCart ket={product.id} product={product}/> )
+      cart.map(product => <ItemCart key={product.id} product={product}/> )
       }
-      <p>
-        Total: {totalPrice()}
-      </p>
+      <h1>
+        Cart Total: $ {totalPrice()} 
+      </h1>
+      <Link to='/checkout'><h1>End Purchase 💸</h1></Link>
   </>
   )
 }
