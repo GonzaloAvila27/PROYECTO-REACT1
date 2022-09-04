@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 import {collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import '../Styles/listContainer.css'
 
 
 
@@ -32,9 +33,9 @@ export default function ItemListContainer() {
   
 
   return (
-    <div className='container text-center' style={{border:"red solid 1px", margin:"2rem"}}>
-      <div className='row'>
-      <ItemList products={products} />
+    <div style={{border:"red solid 1px", margin:"2rem", width:"100%"}}>
+      <div className='listContainer'>
+      <ItemList  products={products} />
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item'
-
+import '../Styles/listContainer.css'
 
 
 export default function ItemList({products}) {

@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 export default function Item({info}) {
   return (
     <>
-    <Link to={`/producto/${info.id}`} className="col-4">
+    <Link to={`/producto/${info.id}`} style={{border:"blue solid 1px"}} >
         <div className="card" style={{width: "18rem"}}>
-                <img src={info.image} className="image" alt={info.name}/>
-            <div className="card-body">
-                <h5 className="card-title">{info.name}</h5>
+                <img src={info.image}  alt={info.name}/>
+            <div >
+                <h5 >{info.name}</h5>
           </div>
       </div>
     </Link>

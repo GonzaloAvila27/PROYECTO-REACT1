@@ -7,7 +7,8 @@ import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/DetailList/ItemDetailContainer';
 import Checkout from "./components/Checkout";
 import Cart from './components/Cart';
-import { CartP, useCartContext } from './context/CartContext';
+import { CartP } from './context/CartContext';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
            <Route path="/checkout" element={ < Checkout />} />
            <Route path='*' element={<p>404</p>}/>
         </Routes>
+    <Footer />
     </CartP>
-    <h1>ACA VA EL FOOOTERRRRRRRRR</h1>
    
     </BrowserRouter>
 

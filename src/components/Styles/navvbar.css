@@ -1,0 +1,31 @@
+
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 10vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  justify-content: space-around;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.navbrand {
+  width: 30vw;
+  height: auto;
+  padding: 10px;
+  background-image: url(../../public/LOGOBERK.svg);
+  background-repeat: no-repeat;
+
+}
+.nav-link {
+    text-align: center;
+    color: #f1f1f1;
+    background-color: lightblue;
+    width: 10vw;
+    padding: 1vw;
+    margin: 1vw;
+}

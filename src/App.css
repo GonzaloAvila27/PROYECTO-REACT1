@@ -4,7 +4,9 @@
     box-sizing: border-box;
  } 
 
-
+body {
+  background-color: #d4d4d4;
+}
 button {
     font-size: 0.8rem;
     padding: 0.2rem;
