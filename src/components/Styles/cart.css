@@ -1,25 +1,20 @@
 .cartWit {
     display: flex;
     flex-direction: row;
- color: aliceblue;
- background-color: lightblue;
- width: 100%;
- padding: 10px;
- margin: 10px;
+    width: 100%;
+    padding: 1vw;
+    margin: 1vw;
 }
 
 .cartWit__total {
-   color: rgb(0, 0, 0);
-   left: 0;
-   width: 20vw;
+   color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 4rem;
+   align-self: stretch;
 }
 .cartWit__img {
-
-    width: 80vw;
-    height: 10vh;
-    padding: 10px;
-    margin: 10px;
-    right: 0;
+    padding: 5rem;
     background-image: url(../../public/CARTRED.svg);
     background-repeat: no-repeat;
+    background-size: auto;
 }

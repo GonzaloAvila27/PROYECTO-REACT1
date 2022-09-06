@@ -33,7 +33,7 @@ export default function ItemListContainer() {
   
 
   return (
-    <div style={{border:"red solid 1px", margin:"2rem", width:"100%"}}>
+    <div>
       <div className='listContainer'>
       <ItemList  products={products} />
       </div>
