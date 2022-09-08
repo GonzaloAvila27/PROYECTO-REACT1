@@ -1,35 +1,19 @@
+
+:root{
+  --white: #ffff;
+  --red: #DD4842;
+  --blue: #5A9ECB;
+  --black: #000;
+  --trans: all 0.5s ease-in-out;
+}
 * {
     margin:0 ;
     padding: 0;
     box-sizing: border-box;
  } 
-
-body {
-  background-color: #ffffff;
-  max-width: 1920px;
-  overflow: auto;
-
-}
-button {
-    font-size: 2rem;
-    padding: 2rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    border: 0.5rem #404040 solid;
-    width: 20%;
-    cursor: pointer;
-  }
-  button.add {
-    background-color: #40c0f0;
-    width: 1.5rem;
-  }
-  button.remove {
-    background-color: #f04040;
-    width: 1.5rem;
-  }
 h1 {
   text-align: center;
-  background-color: #40c0f0;
+  background-color:var(--blue);
   margin: 20px;
   padding: 20px;
   font-family: 'Bebas Neue', cursive;
@@ -42,4 +26,18 @@ h5 {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
+}
+.keep {
+  color: var(--white);
+  background-color: var(--black);
+  border: var(--black) double 1rem;
+  padding: 0.1rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  text-align: center;
+}
+.keep:hover {
+  border: var(--white) double 0.1rem;
 }

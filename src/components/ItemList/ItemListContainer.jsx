@@ -10,6 +10,8 @@ export default function ItemListContainer() {
   
 
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const { idCategory } = useParams()
   
   useEffect(() => {
@@ -27,16 +29,22 @@ export default function ItemListContainer() {
           id: products.id,
         }))
         setProducts(fireProducts)
-      })  
+      }) 
+        .catch((e) => {
+        setError(true)
+      })
+        .finally(() => {
+        setLoading(false)
+      })
     } , [idCategory])
   
   
 
   return (
-    <div>
-      <div className='listContainer'>
-      <ItemList  products={products} />
+    <>{error && console.log("something went wrong")}
+      <div>
+        <div className='listContainer'> <ItemList  products={products} loading={loading} /> </div>
       </div>
-    </div>
+  </>
   )
 }

@@ -3,7 +3,7 @@ import Item from './Item'
 import '../Styles/listContainer.css'
 
 
-export default function ItemList({products}) {
+export default function ItemList({products, loading}) {
   return (
     <> 
         {products.map((product)=>(

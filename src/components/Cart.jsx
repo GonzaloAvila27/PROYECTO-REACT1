@@ -2,6 +2,7 @@ import React from 'react'
 import { useCartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 import ItemCart from './ItemCart'
+import './Styles/cart.css'
 
 export default function Cart({product}) {
   const {cart, totalPrice} = useCartContext()
@@ -9,21 +10,23 @@ export default function Cart({product}) {
   if (cart.length === 0) {
     return (
       <>
-        <p> No elements</p>
-        <Link to='/'>GO SHOPPING!</Link>
+        <p className='cart__empty'>❗--- The cart is empty 😢🥀 ---❗</p>
+        <Link to='/'><div className='keep'>GO SHOPPING!🛒</div></Link>
       </>
     )
   }
   
   return ( 
-  <>
-      {
-      cart.map(product => <ItemCart key={product.id} product={product}/> )
-      }
-      <h1>
-        Cart Total: $ {totalPrice()} 
-      </h1>
-      <Link to='/checkout'><h1>End Purchase 💸</h1></Link>
+  <>  
+      <div className='cart'>
+              {
+              cart.map(product => <ItemCart key={product.id} product={product}/> )
+              }
+              <div className='cart__total'>Cart Total: 💲 {totalPrice()}</div>
+              <Link to='/checkout'><div className='cart__end'>End Purchase 💸</div></Link>
+              <Link to='/'><div className='keep'>Keep shopping!🛒</div></Link>
+      </div>
+
   </>
   )
 }

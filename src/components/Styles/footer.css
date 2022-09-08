@@ -1,7 +1,7 @@
 footer{
     width: 100vw;
     position: fixed;
-    background-color:  #DD4842;
+    background-color: var(--red);
     bottom: 0;
     z-index: 2;
 }
@@ -13,18 +13,18 @@ footer > .container{
 }
 .social-icons{
     display: flex;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
 }
 .social-icons a{
-    color: rgb(255, 255, 255);
+    color: var(--white);
     margin: 1 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 5rem;
-    height: 5rem;
-    font-size: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
 }
 .social-icons a:hover{
-    color: cornflowerblue;
+    color: var(--blue);
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
-import './Styles/cart.css'
+import './Styles/navvbar.css'
 
  
 

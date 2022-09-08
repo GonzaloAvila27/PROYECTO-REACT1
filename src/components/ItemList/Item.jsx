@@ -2,9 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default function Item({info}) {
+export default function Item({info, loading}) {
   return (
     <>
+            {loading && 
+      <div className="d-flex justify-content-center">
+      <div className="spinner-border" role="status"/>
+      </div>
+            } { loading ||
+
     <Link to={`/producto/${info.id}`} >
         <div className="card">
           <div className='card__inner'>
@@ -14,6 +20,7 @@ export default function Item({info}) {
                 <h5 className='card__title'>{info.name}</h5>
       </div>
     </Link>
+    }
     </>
  )
 }
