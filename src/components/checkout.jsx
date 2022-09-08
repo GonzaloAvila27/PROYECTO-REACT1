@@ -1,8 +1,8 @@
 
 
 import React from 'react'
-import { useState, useEffect, useContext } from 'react'
-import { addDoc, collection, getFirestore, updateDoc } from 'firebase/firestore'
+import { useState} from 'react'
+import { addDoc, collection, getFirestore} from 'firebase/firestore'
 import { useCartContext } from '../context/CartContext'
 
 
@@ -57,14 +57,6 @@ export default function Checkout() {
         <div className="finished">
             <p className="thx">Thanks for choosing our products!</p>
             <p className="code"> Follow id: {idOrder} </p> 
-            { Swal.fire({
-                title: 'Thanks for choosing our products!',
-                text: `Follow id: ${idOrder}`,
-                imageUrl: 'https://unsplash.it/400/200',
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: 'Custom image',
-            })}
         </div>
       }
      </>

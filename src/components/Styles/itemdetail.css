@@ -34,20 +34,21 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 20vw;
   }
   .counter__add {
     color: var(--white);
+    background-color: var(--blue);
     border-radius: 6px;
-    width: 3rem;
-    height: 2rem;
-    font-family: 'Bebas Neue', cursive;
+    width: 4rem;
+    height: auto;
   }
   .counter__remove {
     color: var(--white);
     border-radius: 6px;
-    width: 3rem;
-    height: 2rem;
-    font-family: 'Bebas Neue', cursive;
+    background-color: var(--red);
+    width: 4rem;
+    height: auto;
   }
   .counter__number {
     color: var(--white);
@@ -62,3 +63,10 @@ button {
     font-size: 4rem;
     margin-top: 10rem;
   }
+.bi-dash {
+    font-size: 1rem;
+    top: 0;
+}
+.bi-plus-lg {
+    font-size: 1rem;
+}
