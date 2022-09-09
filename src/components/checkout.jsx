@@ -4,6 +4,7 @@ import React from 'react'
 import { useState} from 'react'
 import { addDoc, collection, getFirestore} from 'firebase/firestore'
 import { useCartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
 import './Styles/check.css';
 
 export default function Checkout() {
@@ -57,8 +58,9 @@ export default function Checkout() {
 
         :
         <div className="finished">
-            <p className="finished__thx">Thanks for choosing our products!</p>
-            <p className="finished__code"> Follow id: {idOrder} </p> 
+            <div className="finished__thx">Thanks for choosing our products!🤩</div>
+            <div className="finished__code"> Follow id: {idOrder} </div> 
+            <Link to='/' className='finished__home'>Go to front page🏠</Link>
         </div>
       }
      </>
