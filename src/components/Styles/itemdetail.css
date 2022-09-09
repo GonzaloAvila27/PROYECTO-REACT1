@@ -63,6 +63,9 @@ button {
     font-size: 4rem;
     margin-top: 10rem;
   }
+  .counter__cart:hover {
+    color: var(--blue);
+  }
 .bi-dash {
     font-size: 1rem;
     top: 0;

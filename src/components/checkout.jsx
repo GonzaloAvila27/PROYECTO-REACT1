@@ -4,7 +4,7 @@ import React from 'react'
 import { useState} from 'react'
 import { addDoc, collection, getFirestore} from 'firebase/firestore'
 import { useCartContext } from '../context/CartContext'
-
+import './Styles/check.css';
 
 export default function Checkout() {
 
@@ -12,19 +12,19 @@ export default function Checkout() {
     const [name, setName] = useState('')
     const [tel, setTel] = useState('')
     const [email, setEmail] = useState('')
+    const [address, setAddress] = useState('')
     const [idOrder, setIdOrder] = useState('')
     const [finished, setFinished] = useState(false)
 
-    const endPurchase = () => {
-        const order = 
-        { 
-            buyer: {name, tel, email}, 
-            items: cart.map(product => ({id: product.id, name: product.name, price: product.price, quantity: product.quantity})),
-            total: totalPrice()
-        }
-
-        console.log(order)
-
+    const order = 
+    { 
+        buyer: {name, tel, email, address}, 
+        items: cart.map(product => ({id: product.id, name: product.name, price: product.price, quantity: product.quantity})),
+        total: totalPrice()
+    }
+    
+   
+    const handleClick  = () => {
         const db = getFirestore()
         const refCollection = collection(db, 'orders')
 
@@ -41,22 +41,24 @@ export default function Checkout() {
     { 
         !finished 
         ? 
-        <div className="formCheckout">
+        <div className="form">
                 
-            <input className="formInput" type = {'text'} placeholder = "Set name" value={name} onChange={(e) => setName(e.target.value)} />
+            <input className="form__Input" type = {'text'} placeholder = "Name" value={name} onChange={(e) => setName(e.target.value)} />
             
-            <input className="formInput" type = {'tel'} placeholder = "Set celphone" value={tel} onChange={(e) => setTel(e.target.value)}/>
+            <input className="form__Input" type = {'tel'} placeholder = "Celphone" value={tel} onChange={(e) => setTel(e.target.value)}/>
                 
-            <input className="formInput" type = {'email'} placeholder = "Set e-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input className="form__Input" type = {'email'} placeholder = "E-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
+
+            <input className="form__Input" type = {'address'} placeholder = "address" value={address} onChange={(e) => setAddress(e.target.value)}/>
             
-            <button className="formBtn" onClick={endPurchase}> End Purchase </button>
+            <button className="form__Btn" onClick={handleClick}> End Purchase </button>
             
         </div>
 
         :
         <div className="finished">
-            <p className="thx">Thanks for choosing our products!</p>
-            <p className="code"> Follow id: {idOrder} </p> 
+            <p className="finished__thx">Thanks for choosing our products!</p>
+            <p className="finished__code"> Follow id: {idOrder} </p> 
         </div>
       }
      </>

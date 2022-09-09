@@ -13,9 +13,9 @@ export default function ItemDetail({product, loading}) {
   const onAdd = (count) => {
     if (count <= product.stock) { 
       Swal.fire({
-                title: `U added ${count} to ur cart!`,
-                width: 1600,
-                padding: '3em',
+                title: `Added ${count} ${product.name} 🍻 to your cart!`,
+                width: 600,
+                padding: '2em',
                 color: '#5A9ECB',
                 })
     setGoCart(true)
